@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <table width="100%" border="0">
+            <tr>
+                <td width="20%"></td>
+                <td><center><strong>Product Information</strong></center></td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td rowspan="4" width="10%"><img src="coke.jpeg" height="100px" width="100px" /></td>
+                <td>Name: Apple</td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td>Type: Juice</td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td>Size: 500ml</td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td>Description: Fresh juice extracted from Apple</td>
+                <td width="20%"></td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td width="20%"></td>
+                <td rowspan="4" width="10%"><img src="bottle.jpeg" height="100px" width="100px" /></td>
+                <td>Name: Orange</td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td>Type: Extract</td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td>Size: 250ml</td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td>Description: Orange extracts with real pulp</td>
+                <td width="20%"></td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<% for (i=0;i<testarray.length;i++){ %> 
+    <b>Name:</b> <%= testarray[i].name %> <br />  
+    <b>Email:</b> <%= testarray[i].email %> <br />
+    <b>Comment:</b> <%= testarray[i].comment %> <br />
+    <br />
+    <br />
+<%  } %>

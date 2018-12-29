@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Client Data</title>
+        <link rel="stylesheet" href="css/mystyle.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a class="active" href="/addData">Add Data</a></li>
+            <li><a href="/viewData">View Data</a></li>
+            <li style="float:right"><a href="#about">About</a></li>
+        </ul>
+        <center><h1>Please fill data in the form below:</h1></center>
+        
+        <form method="POST" action="/post-feedback">
+            <table width="100%" border="0">            
+                <tr>
+                    <td width="20%"> </td>
+                    
+                    <td><label>Name:</td>
+                    <td><input type="text" name="user[name]" required></label></td> 
+                    
+                    <td width="20%"> </td>
+                </tr>
+
+                <tr>
+                    <td width="20%"> </td>
+
+                    <td><label>Type:</td>
+                    <td><input type="text" name="user[type]" required></label></td>
+                    
+                    <td width="20%"> </td>
+                </tr>
+            
+                <tr>
+                    <td width="20%"> </td>
+                    
+                    <td><label>Size:</td>
+                    <td><input type="text" name="user[size]" required></label></td>
+
+                    <td width="20%"> </td>
+                </tr>
+            
+                <tr>
+                    <td width="20%"> </td>
+
+                    <td><label>Description:</td>
+                    <td><input type="text" name="user[descript]"></label></td>
+
+                    <td width="20%"> </td>
+                </tr>
+
+                <tr>
+                    <td width="20%"> </td>
+
+                    <td><input type="submit" value="Submit"></td>
+                    <td></td>
+
+                    <td width="20%"> </td>
+                </tr>
+            
+            </table>
+           
+        </form>
+        
+    </body>
+</html>
+

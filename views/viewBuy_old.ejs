@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/mystyle.css">
+        <script src="scripts/jquery.js"></script>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/addData">Add Data</a></li>
+            <li><a href="/viewData">View Data</a></li>
+            <li><a class="active" href="/viewBuy">Bought Items</a></li>
+            <li><a href="/viewBuyUsers">My Items</a></li>
+            <li style="float:right"><a href="/myLogOut">LogOut</a></li>
+           <!-- <li style="float:right"><a href="#about">About</a></li> -->
+        </ul>
+        
+        <br />
+
+        <center> <h2> Products bought by all Customers </h2> </center>
+        
+        <% for (i=0;i<boughtItems.length;i++){ %>
+            
+                <table width="100%" border="0">        
+                    <tr>
+                        <td width="20%"></td>
+                        <td rowspan="8" width="10%"><img src="img/<%=boughtItems[i].productID%>.jpeg" height="100px" width="100px" /></td>
+                        <td>Name: <%= boughtItems[i].productName %> </td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Type: <%= boughtItems[i].productType %> </td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Size: <%= boughtItems[i].productSize %> </td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Unit Price: <%= boughtItems[i].productPrice %></td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                            <td width="20%"></td>
+                            <td>Total Units: <%= boughtItems[i].productUnit %></td>
+                            <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Bought By: <%= boughtItems[i].myUser %></td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Total Price: <%= (parseInt(boughtItems[i].productUnit))*(parseInt(boughtItems[i].productPrice)) %></td>
+                        <td width="20%"></td>
+                    </tr>
+
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                </table>                
+            
+            <hr width="60%" />
+        <%  } %>
+                
+        
+    </body>
+</html>

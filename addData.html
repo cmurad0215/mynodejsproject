@@ -10,7 +10,10 @@
             <li><a href="/">Home</a></li>
             <li><a class="active" href="/addData">Add Data</a></li>
             <li><a href="/viewData">View Data</a></li>
-            <li style="float:right"><a href="#about">About</a></li>
+            <li><a href="/viewBuy">Bought Items</a></li>
+            <li><a href="/viewBuyUsers">My Items</a></li>
+            <li style="float:right"><a href="/myLogOut">LogOut</a></li>
+           <!-- <li style="float:right"><a href="#about">About</a></li> -->
         </ul>
         <center><h1>Please fill data in the form below:</h1></center>
         
@@ -27,7 +30,6 @@
 
                 <tr>
                     <td width="20%"> </td>
-
                     <td><label>Type:</td>
                     <td><input type="text" name="user[type]" required></label></td>
                     
@@ -41,6 +43,14 @@
                     <td><input type="text" name="user[size]" required></label></td>
 
                     <td width="20%"> </td>
+                </tr>
+                <tr>
+                        <td width="20%"> </td>
+                        
+                        <td><label>Unit Price:</td>
+                        <td><input type="text" name="user[uprice]" required></label></td>
+    
+                        <td width="20%"> </td>
                 </tr>
             
                 <tr>
@@ -67,4 +77,3 @@
         
     </body>
 </html>
-

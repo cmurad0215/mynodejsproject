@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/mystyle.css">
+        <script src="scripts/jquery.js"></script>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/addData">Add Data</a></li>
+            <li><a class="active" href="/viewData">View Data</a></li>
+            <li><a href="/viewBuy">Bought Items</a></li>
+            <li><a href="/viewBuyUsers">My Items</a></li>
+            <li style="float:right"><a href="/myLogOut">LogOut</a></li>
+           <!-- <li style="float:right"><a href="#about">About</a></li> -->
+        </ul>
+        
+        <br />
+
+        <center> <h2> Products Available To Buy </h2> </center>
+        
+        <% for (i=0;i<testarray.length;i++){ %>
+            <form method="POST" action="/buyProduct">
+                <table width="100%" border="0">        
+                    <tr>
+                        <td width="20%"></td>
+                        <td rowspan="9" width="10%"><img src="img/<%=i%>.jpeg" height="100px" width="100px" /></td>
+                        <td>Name: <%= testarray[i].name %> </td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Type: <%= testarray[i].type %> </td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Size: <%= testarray[i].size %> </td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td>Description: <%= testarray[i].descript %></td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                            <td width="20%"></td>
+                            <td>Unit Price: <%= testarray[i].uprice %></td>
+                            <td width="20%"></td>
+                    </tr>
+                    <tr>
+                            <td width="20%"></td>
+                            <td>Unit: <input type="text" name="user[productUnit]" style="width: 40px"></td>
+                            <td width="20%"></td>
+                    </tr>
+                    <tr>
+                            <td width="20%"></td>
+                            <td><input style="float:right" type="submit" value="BUY Product"></td>
+                            <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td><input type="hidden" name="user[myUser]" value="<%= myLoggedUser %>"></td>
+                        <td width="20%"></td>
+                    </tr>
+                    
+
+
+
+                    <tr>
+                        <td width="20%"></td>
+                        <td><input type="hidden" name="user[productName]" value="<%= testarray[i].name %>"></td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td><input type="hidden" name="user[productType]" value="<%= testarray[i].type %>"></td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td><input type="hidden" name="user[productSize]" value="<%= testarray[i].size %>"></td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td><input type="hidden" name="user[productPrice]" value="<%= testarray[i].uprice %>"></td>
+                        <td width="20%"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td><input type="hidden" name="user[productID]" value="<%= i %>"></td>
+                        <td width="20%"></td>
+                    </tr>    
+
+                                
+                    
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                </table>                
+            </form>
+            <hr width="60%" />
+        <%  } %>
+                
+        
+    </body>
+</html>

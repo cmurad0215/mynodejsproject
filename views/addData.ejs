@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <% if(myLoggedUser!=""){ %>
+            <a class="nav-brand" href="/"><%= myLoggedUser %></a>
+        <% }else{ %>  
+            <a class="nav-brand" href="/">গেস্ট</a>
+        <% } %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">হোম
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">তথ্য</a>
+                    </li>
+                    <li class="nav-item">              
+                        <% if(myLoggedUser!=""){ %>
+                        <a class="nav-link" href="/myLogOut">লগ আউট</a>
+                        <% }else{ %>  
+                        <a class="nav-link" href="/myLogin">লগ ইন</a>
+                        <% } %>              
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">যোগাযোগ</a>
+                </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+
+            <h1 class="my-4">কেনাকাটা ডট কম</h1>
+            <div class="list-group">
+                <a href="/addData" class="list-group-item">পণ্য যোগ</a>
+                <a href="/viewBuy" class="list-group-item">আমার কার্ট</a>
+            <!--   <a href="#" class="list-group-item">Category 3</a>  -->
+            </div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+                <br />
+            <center><h1>পন্ন্যের বিবরণ দিন</h1></center>
+            <br /> <br /> 
+
+            <form method="POST" action="/post-feedback">
+                <table width="100%" border="0">            
+                    <tr>
+                        <td width="20%"> </td>
+                        
+                        <td><label><b>নাম:</b></td>
+                        <td><input type="text" name="user[name]" required></label></td> 
+                        
+                        <td width="20%"> </td>
+                    </tr>
+    
+                    <tr>
+                        <td width="20%"> </td>
+                        <td><label><b>টাইপ:</b></td>
+                        <td><input type="text" name="user[type]" required></label></td>
+                        
+                        <td width="20%"> </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="20%"> </td>
+                        
+                        <td><label><b>সাইজ:</b></td>
+                        <td><input type="text" name="user[size]" required></label></td>
+    
+                        <td width="20%"> </td>
+                    </tr>
+                    <tr>
+                            <td width="20%"> </td>
+                            
+                            <td><label><b>দাম:</b></td>
+                            <td><input type="text" name="user[uprice]" required></label></td>
+        
+                            <td width="20%"> </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="20%"> </td>
+    
+                        <td><label><b>বর্ণনা:</b></td>
+                        <td><input type="text" name="user[descript]"></label></td>
+    
+                        <td width="20%"> </td>
+                    </tr>
+    
+                    <tr>
+                        <td width="20%"> </td>
+    
+                        <td><input type="submit" value="Submit"></td>
+                        <td></td>
+    
+                        <td width="20%"> </td>
+                    </tr>
+                
+                </table>
+               
+            </form>
+
+
+
+        </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
